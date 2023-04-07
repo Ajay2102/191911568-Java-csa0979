@@ -1,0 +1,24 @@
+public class PatternPrinting {
+    public static void main(String[] args) {
+        int numRows = 4; // Change this variable to adjust the number of rows in the pattern
+        
+        // Iterate over each row of the pattern
+        for (int i = 1; i <= numRows; i++) {
+            // Print the numbers in each row
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i + "  ");
+            }
+            
+            // Print the spaces between the numbers
+            for (int j = i + 1; j <= numRows; j++) {
+                System.out.print("   ");
+            }
+            
+            // Move to the next line
+            System.out.println();
+        }
+        
+        // Iterate over each row of the second half of the pattern
+        for (int i = numRows - 1; i >= 1; i--) {
+            // Print the numbers in each row
+            for (int
