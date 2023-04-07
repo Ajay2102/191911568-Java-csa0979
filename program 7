@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class LcmGcdFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the number of input values
+        System.out.print("N value = ");
+        int n = scanner.nextInt();
+        
+        // Read the input values
+        int[] numbers = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Number " + (i+1) + " = ");
+            numbers[i] = scanner.nextInt();
+        }
+        
+        // Find the LCM of the input values
+        int lcm = numbers[0];
+        for (int i = 1; i < n; i++) {
+            lcm = findLcm(lcm, numbers[i]);
+        }
+        
+        // Find the GCD of the input values
+        int gcd = numbers[0];
+        for (
