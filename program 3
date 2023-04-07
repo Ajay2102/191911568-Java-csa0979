@@ -1,0 +1,24 @@
+public class PatternPrinting {
+    public static void main(String[] args) {
+        int numRows = 5; // Change this variable to adjust the number of rows in the pattern
+        
+        // Iterate over each row of the pattern
+        for (int i = 0; i < numRows; i++) {
+            
+            // Print spaces before the numbers in each row
+            for (int j = 0; j < numRows - i - 1; j++) {
+                System.out.print("  ");
+            }
+            
+            // Calculate and print the numbers in each row
+            int num = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.printf("%-4d", num); // Use %-4d to print each number in a field of 4 characters
+                num = num * (i - j) / (j + 1); // Calculate the next number using the binomial coefficient formula
+            }
+            
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
