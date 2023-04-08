@@ -1,0 +1,36 @@
+import java.util.*;
+ 
+class GFG {
+ 
+    static void minMax(int[] arr)
+    {
+        long min_value = 0;
+        long max_value = 0;
+        int n = arr.length;
+        
+        Arrays.sort(arr);
+                           
+        for (int i = 0, j = n - 1;
+             i < n - 1; i++, j--)
+        {
+            
+            min_value += arr[i];
+           
+            max_value += arr[j];
+        }
+        
+        System.out.println(
+            min_value + " "
+            + max_value);
+    }
+ 
+    
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = { 10, 9, 8, 7, 6, 5 };
+        int[] arr1 = { 100, 200, 300, 400, 500 };
+        minMax(arr);
+        minMax(arr1);
+    }
+}
