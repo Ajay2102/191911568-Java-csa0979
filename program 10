@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class dbc {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int decimal = input.nextInt();
+        String binary = "";
+        int temp = decimal;
+        while (temp != 0) {
+            int remainder = temp % 2;
+            binary = remainder + binary;
+            temp = temp / 2;
+        }
+        String octal = "";
+        temp = decimal;
+        while (temp != 0) {
+            int remainder = temp % 8;
+            octal = remainder + octal;
+            temp = temp / 8;
+        }
+
+        System.out.println("Binary equivalent: " + binary);
+        System.out.println("Octal equivalent: " + octal);
+    }
+}
