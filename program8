@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class EmployeeBonus {
+
+    public static void main(String[] args) {
+
+        
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter the salary of the employee: $");
+        double salary = scanner.nextDouble();
+        System.out.print("Enter the grade of the employee (A or B): ");
+        char grade = scanner.next().charAt(0);
+
+        
+        double bonus;
+        if (grade == 'A') {
+            bonus = 0.05 * salary;
+        } else {
+            bonus = 0.1 * salary;
+        }
+
+        
+        if (salary < 10000) {
+            bonus += 0.02 * salary;
+        }
+        double totalSalary = salary + bonus;
+        System.out.println("Bonus: $" + bonus);
+        System.out.println("Total Salary: $" + totalSalary);
+    }
+}
